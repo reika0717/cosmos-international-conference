@@ -16,7 +16,7 @@ body .content__title-en {
   font-weight: 200;
   text-align: center;
   margin-top: 12px;
-  margin-bottom: 3px; }
+  margin-bottom: 18px; }
 
 body .content__title-ja {
   text-align: center;
@@ -28,7 +28,8 @@ body .content__title-ja {
 body .content-box__wrapper {
   width: 800px;
   margin: -30px auto 0;
-  color: #333; }
+  color: #333;
+  padding-bottom: 100px; }
   body .content-box__wrapper.guide .guide_comment {
     line-height: 1.7em;
     font-size: 16px; }
@@ -99,7 +100,6 @@ body .content-box__wrapper {
           width: 61px; }
 
 body .content-box {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 800px;
   margin: 0 auto;
   margin-top: 110px; }
