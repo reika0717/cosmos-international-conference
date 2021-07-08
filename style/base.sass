@@ -18,196 +18,60 @@ $green: rgba(95, 158, 160, 0.9)
 
 //共通
 body
-  .content__title
-    margin-top: 20px
-  .content__title-en
-    font-family: 'Work Sans', sans-serif
-    font-size: 50px
-    font-weight: 200
-    text-align: center
-    margin-top: 12px
-    margin-bottom: 18px
-  .content__title-ja
-    text-align: center
-    font-size: 1.1em
-    opacity: 0.8
-    margin-top: 10px
-    margin-bottom: 40px
   .content-box__wrapper
     width: 800px
-    margin: -30px auto 0
+    margin: 0px auto
     color: #333
     padding-bottom: 100px
-    &.guide
-      .guide_comment
-        line-height: 1.7em
-        font-size: 16px
-      .guide_table
-        width: 787px
-        margin-left: 15px
-        border: none
-        .title
-          width: 421px
-        td
-          border: none
-          text-align: left
-        tr:nth-child(even)
-          background: transparent
-      .climing_way_list
-        display: flex
-        align-items: center
-        margin-top: 17px
-        margin-bottom: 4px
-        .icon_foot
-          width: 25px
-          height: 25px
-          margin-left: 23px
-        .climing_way_name
-          font-weight: 600
-      .accommodation_list
-        margin-left: 15px
-        margin-bottom: 15px
-        dt
-          margin-bottom: 10px
-          a
-            color: #333
-            font-weight: 600
-        dd
-          p
-            line-height: 1.3em
-            color: gray
-            font-size: 14.5px
-            margin-bottom: 5px
-    &.venue
-      .map__wrapper
-        display: flex
-        justify-content: center
-        a
-          display: flex
-          justify-content: center
-        .to_hachioji
-          width: 90%
-          height: 90%
-          margin-top: 25px
-          margin-bottom: 45px
-    &.deadline
-      p
-        line-height: 1.7em
-        font-size: 16px
-        margin-left: 20px
-    &.log
-      ul
-        li
-          line-height: 1.7em
-          font-size: 16px
-          margin-left: 20px
-      table
-        border: none
-        tr
-          background: none
-          td
-            border: none
-            text-align: left
-            width: 0
-            &.date
-              padding-left: 20px
-              width: 61px
-  .content-box
-    width: 800px
-    margin: 0 auto
-    margin-top: 110px
+    h2
+      font-family: 'Work Sans', sans-serif
+      font-size: 50px
+      font-weight: 200
+      text-align: center
+      margin-top: 60px
+      margin-bottom: 18px
+    h3
+      color: rgba(95, 158, 160, 0.9) 
+      margin-bottom: 2px
+      border-left: 4px solid rgba(95, 158, 160, 0.9) 
+      padding: 7px 15px
+      font-size: 18px
+      letter-spacing: 1px
     p
       line-height: 1.7em
       font-size: 16px
       margin-left: 20px
-    .content-box__article
-      margin-bottom: 80px
-  .sub-title__wrapper
-    .content__title-small
-      color: rgba(95, 158, 160, 0.9) 
-      margin-bottom: 15px
-      border-left: 4px solid rgba(95, 158, 160, 0.9) 
-      padding: 7px 15px
-      font-size: 22px
-      letter-spacing: 1px
-      &.deadline
-        margin-top: 110px
-      &.guide
-        margin-top: 55px
-  table
-    margin-top: 10px
-  table, th, td
-    border-collapse: collapse
-    border: 1px solid rgba(0, 0, 0, .1)
-    line-height: 1.5
-    padding: 3px 7px 3px 7px
-    font-size: 15px
-    margin: 35px auto 4px
-    width: 800px
-    text-align: center
-    padding: 5px
-  tr:nth-child(even)
-    background: rgba(0, 0, 0, .05)
-  .emphasis_underline
-    font-weight: 600
-    text-decoration: underline
-  .title_underline
-    font-weight: 600
-    display: inline-block
-    border-bottom: 1px solid black
-    line-height: 1.2em !important
-    &.guide
-      font-size: 16px
-      margin-bottom: 5px
+    ul
+      margin-bottom: 40px
+      li
+        line-height: 1.7em
+        font-size: 16px
+        margin-left: 20px
+      tr
+        background: none
+        td
+          border: none
+          text-align: left
+          width: 0
+    table, th, td
+      border-collapse: collapse
+      border: 1px solid rgba(0, 0, 0, .1)
+      line-height: 1.5
+      padding: 3px 7px 3px 7px
+      font-size: 15px
+      margin: 35px auto 4px
+      width: 800px
+      text-align: center
+      padding: 5px
+    tr:nth-child(even)
+      background: rgba(0, 0, 0, .05)
+    table
+      margin-top: 10px
+      border: none
+
   .content__header-section
     width: 100vw
     height: 79px
-  .content__main-title
-    padding: 7px 0
-    background-color: rgba(95, 158, 160, 0.9)
-    position: fixed
-    width: 100vw
-    h1
-      text-align: center
-      font-size: 17px
-      color: white
-      letter-spacing: 2px
-  .common__list
-    li
-      list-style: none
-      line-height: 1.7em
-      &:last-of-type
-        margin-bottom: 45px
-    &.bus
-      margin-top: 27px
-      margin-left: 23px
-      li
-        line-height: 2.4em
-        &:before
-          content: '\f207'
-          font-family: FontAwesome
-          margin-right: 8px
-          color: rgba(95, 158, 160, 0.9)
-    &.campus_map
-      margin-left: 39px
-      margin-top: 4px
-      li
-        list-style: inherit
-    &.campus_map_2
-      margin-left: 21px
-      margin-top: 4px
-    &.access
-      margin-top: 27px
-      margin-left: 23px
-      li
-        line-height: 2em
-        &:before
-          content: '\f207'
-          font-family: FontAwesome
-          margin-right: 8px
-          color: rgba(95, 158, 160, 0.9)
-  ol,ul
-    line-height: 1.7em    
 
 //header
 header
@@ -392,12 +256,12 @@ footer
     text-decoration: none
     line-height: 1.7em
     font-size: 15px
-.program_subscription_section
+.program_registration.html_section
   display: flex
   align-items: center
   i
     margin-right: -12px
-.program_subscription_list
+.program_registration.html_list
   margin: 20px 0 20px 40px
 .program__table
   td
@@ -431,8 +295,8 @@ footer
   font-size: .9em !important
   color: gray
 
-//subscription
-.subscription__bank_section
+//registration.html
+.registration.html__bank_section
   margin: 10px 0 10px 44px
 .application_download
   margin-top: 18px
@@ -465,7 +329,7 @@ footer
   .floor_map
     width: 392px
     height: auto
-//subscription
+//registration.html
 .registration_table
   .rowspan_2
     vertical-align: middle
