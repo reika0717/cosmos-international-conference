@@ -13,7 +13,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
-<body id="body">
+<body>
   <header>
     <div class="hamburger">
       <i class="fa fa-bars" aria-hidden="true"></i>
@@ -21,7 +21,7 @@
     <nav id='global-nav'>
       <ul class='global-nav__wrapper'>
         <li>
-          <a class='nav__list-parent' href='index.html'>HOME</a>
+          <a class='nav__list-parent active' href='index.html'>HOME</a>
         </li>
         <li class='nav__list-parent nav__toggle'>
           <a href='venue.html' class="main__title">Venue</a>
@@ -48,17 +48,26 @@
     </nav>
   </header>
   <div class="content__wrapper">
+    <div class="content__header-section"></div>
     <div class="home__wrapper" id="home__main">
-      <div class="home__main">
-        <img src="assets/top_title.png" alt="" class="top_logo">
-        <a href="#home__content" class="scroll-btn">
-          <span></span>Scroll</a>
-      </div>
+      <h1>
+        COSMOS<br>INTERNATIONAL<br>CONFERENCE
+      </h1>
+      <span class="line"></span>
+      <p>Sustainable Trans-Equatorial<br>Microalgae Technologies for<br>the Advancement of Circular Economy</p>
     </div>
     <div id="home__content" class="content-box__wrapper">
     </div>
   </div>
-  <footer id='footer'></footer>
+  <footer id='footer'>
+    <p class="title">Brought to you by</p>
+    <br>
+    <p class="title">Partner institutions</p>
+    <br>
+    <p class="title">Fouded by</p>
+    <br>
+    <small>&copy;CIC 2021</small>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/markdown-it@12.1.0/dist/markdown-it.min.js"></script>
   <script src='script/base.js'></script>

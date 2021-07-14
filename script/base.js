@@ -1,16 +1,6 @@
 $(function () {
   /* functions
    ---------------------------------------------------- */
-  const fileName = window.location.href.split('/').pop();
-  if (fileName === 'index.html') {
-    $('.scroll-btn').on('click', function (e) {
-      e.preventDefault();
-      $('html, body').animate({
-        scrollTop: $($(this).attr('href')).offset().top
-      }, 500, 'linear');
-    });
-  }
-
 
   $('.hamburger').on('click', function () {
     $('#global-nav').slideToggle()
@@ -55,6 +45,7 @@ $(function () {
     accessToken: 'PzDWKCS691VB0eOhvIaEkRECKA_5NodC0zNlyeP0fT8'
   })
 
+  const fileName = window.location.href.split('/').pop();
   const currentPath = fileName.replace('.html', '')
 
   client
@@ -64,6 +55,7 @@ $(function () {
     .then(entries => {
       let contents = entries.items.find(item => item.fields.name === currentPath).fields.text
       var md = window.markdownit();
+      md.options.html = true
       contents = md.render(contents);
       $(".content-box__wrapper").html(contents)
       
