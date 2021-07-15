@@ -3,7 +3,18 @@ $(function () {
    ---------------------------------------------------- */
 
   $('.hamburger').on('click', function () {
-    $('#global-nav').slideToggle()
+    $('#global-nav').fadeToggle(function() {
+      if(!$(this).is(':visible')) {
+        $('#global-nav .nav__list-parent').removeClass('show')
+      }
+    })
+    $('#global-nav .nav__list-parent').each(function(i){
+      let delay = 50;
+      $(this).delay(i * delay).queue(function(next){
+          $(this).addClass('show')
+          next();
+      });
+    })
   })
 
   //URLのハッシュ値を取得
