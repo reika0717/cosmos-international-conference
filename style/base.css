@@ -155,7 +155,7 @@ footer {
     font-size: 12px;
     display: flex;
     align-items: center;
-    margin-bottom: 8px; }
+    margin-bottom: 12px; }
     footer > .title:before {
       content: '';
       display: inline-block;
@@ -171,12 +171,14 @@ footer {
   footer > ul.logo_list {
     list-style: none;
     display: flex;
-    margin-bottom: 30px; }
+    margin-bottom: 20px;
+    flex-wrap: wrap; }
     footer > ul.logo_list > li {
-      margin-right: 20px; }
+      margin-right: 12px; }
       footer > ul.logo_list > li > img {
         height: 40px;
-        width: auto; }
+        width: auto;
+        margin-bottom: 12px; }
 
 .content__wrapper {
   background-image: url("../assets/top_main_visual.png");
@@ -296,7 +298,5 @@ footer {
       overflow: auto; }
   footer {
     width: 90%; }
-    footer > ul.logo_list {
-      flex-wrap: wrap; }
-      footer > ul.logo_list > li {
-        margin-bottom: 20px; } }
+    footer > ul.logo_list > li {
+      margin-bottom: 20px; } }
