@@ -299,4 +299,7 @@ footer {
   footer {
     width: 90%; }
     footer > ul.logo_list > li {
-      margin-bottom: 20px; } }
+      margin-bottom: 8px; }
+      footer > ul.logo_list > li > img {
+        height: 30px;
+        margin-bottom: 0; } }
