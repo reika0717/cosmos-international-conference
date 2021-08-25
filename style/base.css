@@ -61,9 +61,10 @@ body .content-box__wrapper h2::after {
 body .content-box__wrapper h3 {
   font-family: 'Fira Sans Extra Condensed', sans-serif;
   transform: scaleX(0.8);
-  font-size: 18px;
+  font-size: 30px;
   text-align: center;
   letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 body .content-box__wrapper p {
@@ -78,15 +79,16 @@ body .content-box__wrapper ul {
 
 body .content-box__wrapper ul li {
   line-height: 1.7em;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 body .content-box__wrapper table {
   border-collapse: collapse;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 20px;
   margin: 35px auto 4px;
-  width: 800px;
+  margin: 35px auto 24px;
+  width: 100%;
   margin-top: 10px;
   border: none;
   border-bottom: 1px solid #ffffff;
