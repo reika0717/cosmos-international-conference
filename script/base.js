@@ -2,27 +2,29 @@ $(function () {
   /* functions
    ---------------------------------------------------- */
 
-  $('.hamburger').on('click', function () {
-    $('#global-nav').fadeToggle(function() {
-      if(!$(this).is(':visible')) {
-        $('#global-nav .nav__list-parent').removeClass('show')
+  $(".hamburger").on("click", function () {
+    $("#global-nav").fadeToggle(function () {
+      if (!$(this).is(":visible")) {
+        $("#global-nav .nav__list-parent").removeClass("show");
       }
-    })
-    $('#global-nav .nav__list-parent').each(function(i){
+    });
+    $("#global-nav .nav__list-parent").each(function (i) {
       let delay = 50;
-      $(this).delay(i * delay).queue(function(next){
-          $(this).addClass('show')
+      $(this)
+        .delay(i * delay)
+        .queue(function (next) {
+          $(this).addClass("show");
           next();
-      });
-    })
-  })
+        });
+    });
+  });
 
   //URLのハッシュ値を取得
   var urlHash = location.hash;
   //ハッシュ値があればページ内スクロール
   if (urlHash) {
     //スクロールを0に戻す
-    $('body,html').stop().scrollTop(0);
+    $("body,html").stop().scrollTop(0);
     setTimeout(function () {
       //ロード時の処理を待ち、時間差でスクロール実行
       scrollToAnker(urlHash);
@@ -34,7 +36,7 @@ $(function () {
     //ページ内リンク先を取得
     var href = $(this).attr("href");
     //リンク先が#か空だったらhtmlに
-    var hash = href == "#" || href == "" ? 'html' : href;
+    var hash = href == "#" || href == "" ? "html" : href;
     //スクロール実行
     scrollToAnker(hash);
     //リンク無効化
@@ -46,30 +48,34 @@ $(function () {
   function scrollToAnker(hash) {
     var target = $(hash);
     var position = target.offset().top;
-    $('body,html').stop().animate({
-      scrollTop: position
-    }, 500);
+    $("body,html").stop().animate(
+      {
+        scrollTop: position,
+      },
+      500
+    );
   }
 
   var client = contentful.createClient({
-    space: 'nl18ogxireh6',
-    accessToken: 'PzDWKCS691VB0eOhvIaEkRECKA_5NodC0zNlyeP0fT8'
-  })
+    space: "nl18ogxireh6",
+    accessToken: "PzDWKCS691VB0eOhvIaEkRECKA_5NodC0zNlyeP0fT8",
+  });
 
-  const fileName = window.location.href.split('/').pop();
-  const currentPath = fileName.replace('.html', '')
+  const fileName = window.location.href.split("/").pop();
+  const currentPath = fileName.replace(".html", "");
 
   client
     .getEntries({
-      content_type: "contents"
+      content_type: "contents",
     })
-    .then(entries => {
-      let contents = entries.items.find(item => item.fields.name === currentPath).fields.text
-      var md = window.markdownit();
-      md.options.html = true
+    .then((entries) => {
+      let contents = entries.items.find(
+        (item) => item.fields.name === currentPath
+      ).fields.text;
+      var md = window.markdownit({ breaks: true });
+      md.options.html = true;
       contents = md.render(contents);
-      $(".content-box__wrapper").html(contents)
-      
+      $(".content-box__wrapper").html(contents);
     })
     .catch(console.error);
 });

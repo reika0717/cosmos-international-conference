@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,300;0,400;0,700&family=Fira+Sans:wght@200;600&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:wght@300;400;700&family=Open+Sans:wght@300&display=swap')
 @import url('normalize.css')
 
 //共通
@@ -23,6 +21,7 @@ body
     margin: 0px auto
     padding-bottom: 100px
     min-height: 90vh
+    font-family: 'Open Sans', sans-serif
     img
       width: 100%
       height: auto
@@ -138,6 +137,9 @@ header
         white-space: nowrap
         &.active
           font-weight: bold
+          color: #f1c813
+          a
+            color: #f1c813
         ul
           display: none
           background: rgba(266, 266, 266, .8)
@@ -229,9 +231,9 @@ footer
   .home__wrapper
     width: 940px
     margin: 0px auto
+    font-family: 'Fira Sans Extra Condensed', sans-serif
     > h1
       font-size: 64px
-      font-family: 'Fira Sans Extra Condensed', sans-serif
       letter-spacing: 4px
       margin-left: 70px
       margin-top: 62px
@@ -245,9 +247,9 @@ footer
       margin: 20px 0 25px
     > p
       font-size: 24px
-      font-family: 'Fira Sans', sans-serif
       margin-left: 70px
       line-height: 38px
+      font-weight: 300
 
 /* ウィンドウ幅が0〜479pxの場合に適用するCSS */
 @media screen and ( max-width:479px )
@@ -340,9 +342,13 @@ footer
         overflow: auto
   footer
     width: 90%
-    > ul.logo_list
-      > li
-        margin-bottom: 8px
-        > img
-          height: 30px
-          margin-bottom: 0
+    min-width: auto
+    padding: 20px 16px 10px
+    > .footer_inner
+      width: 100%
+      > ul.logo_list
+        > li
+          margin-bottom: 8px
+          > img
+            height: 30px
+            margin-bottom: 0
