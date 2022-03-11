@@ -24,7 +24,10 @@ body {
     font-family: 'Open Sans', sans-serif; }
     body .content-box__wrapper img {
       width: 100%;
-      height: auto; }
+      height: auto;
+      margin: 10px 0; }
+    body .content-box__wrapper figure > figcaption {
+      text-align: center; }
     body .content-box__wrapper h2 {
       font-family: 'Fira Sans Extra Condensed', sans-serif;
       transform: scaleX(0.7);
@@ -119,7 +122,7 @@ header {
     list-style-type: none;
     display: flex;
     align-items: center;
-    max-width: 940px;
+    max-width: 1232px;
     margin: 0 auto;
     height: 77px; }
     header nav ul.global-nav__wrapper .nav__list-parent {
