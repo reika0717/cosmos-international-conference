@@ -72,9 +72,14 @@ $(function () {
       let contents = entries.items.find(
         (item) => item.fields.name === currentPath
       ).fields.text;
-      var md = window.markdownit({ breaks: true });
-      md.options.html = true;
+      var md = window.markdownit({
+        breaks: true,
+        html: true,
+      });
       contents = md.render(contents);
+      // console.log(contents);
+      // let domparser = new DOMParser();
+      // console.log(domparser.parseFromString(contents, "text/html"));
       $(".content-box__wrapper").html(contents);
     })
     .catch(console.error);

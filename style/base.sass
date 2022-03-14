@@ -30,7 +30,6 @@ body
       text-align: center
     h2
       font-family: 'Fira Sans Extra Condensed', sans-serif
-      transform: scaleX(.7)
       font-size: 44px
       text-align: center
       margin-top: 60px
@@ -49,7 +48,6 @@ body
         transform: translateX(-50%)
     h3
       font-family: 'Fira Sans Extra Condensed', sans-serif
-      transform: scaleX(.8)
       font-size: 30px
       text-align: center
       letter-spacing: 2px
@@ -57,7 +55,7 @@ body
     p
       line-height: 1.7em
       font-size: 22px
-    ul
+    ul, ol
       margin-bottom: 40px
       padding-left: 15px
       li
@@ -81,6 +79,9 @@ body
         text-align: left
       td
         border-bottom: .5px solid rgba(255, 255, 255, .5)
+    hr
+      margin: 40px 0
+      border-width: 0.5px
     .picture_list
       display: flex
       justify-content: space-between
@@ -101,6 +102,8 @@ body
         width: 200px
         &:first-of-type
           margin-right: 10px
+    .left
+      text-align: left
   .content__header-section
     width: 100vw
     height: 79px
@@ -240,7 +243,6 @@ footer
       letter-spacing: 4px
       margin-left: 70px
       margin-top: 62px
-      transform: scaleX(.7)
       transform-origin: left top
       line-height: 70px
     > span.line

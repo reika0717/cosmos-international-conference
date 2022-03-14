@@ -30,7 +30,6 @@ body {
       text-align: center; }
     body .content-box__wrapper h2 {
       font-family: 'Fira Sans Extra Condensed', sans-serif;
-      transform: scaleX(0.7);
       font-size: 44px;
       text-align: center;
       margin-top: 60px;
@@ -49,7 +48,6 @@ body {
         transform: translateX(-50%); }
     body .content-box__wrapper h3 {
       font-family: 'Fira Sans Extra Condensed', sans-serif;
-      transform: scaleX(0.8);
       font-size: 30px;
       text-align: center;
       letter-spacing: 2px;
@@ -57,10 +55,10 @@ body {
     body .content-box__wrapper p {
       line-height: 1.7em;
       font-size: 22px; }
-    body .content-box__wrapper ul {
+    body .content-box__wrapper ul, body .content-box__wrapper ol {
       margin-bottom: 40px;
       padding-left: 15px; }
-      body .content-box__wrapper ul li {
+      body .content-box__wrapper ul li, body .content-box__wrapper ol li {
         line-height: 1.7em;
         font-size: 22px; }
     body .content-box__wrapper table {
@@ -81,6 +79,9 @@ body {
         text-align: left; }
       body .content-box__wrapper table td {
         border-bottom: 0.5px solid rgba(255, 255, 255, 0.5); }
+    body .content-box__wrapper hr {
+      margin: 40px 0;
+      border-width: 0.5px; }
     body .content-box__wrapper .picture_list {
       display: flex;
       justify-content: space-between;
@@ -101,6 +102,8 @@ body {
         width: 200px; }
         body .content-box__wrapper .logo_SDG > img:first-of-type {
           margin-right: 10px; }
+    body .content-box__wrapper .left {
+      text-align: left; }
   body .content__header-section {
     width: 100vw;
     height: 79px; }
@@ -218,7 +221,6 @@ footer {
       letter-spacing: 4px;
       margin-left: 70px;
       margin-top: 62px;
-      transform: scaleX(0.7);
       transform-origin: left top;
       line-height: 70px; }
     .content__wrapper .home__wrapper > span.line {
